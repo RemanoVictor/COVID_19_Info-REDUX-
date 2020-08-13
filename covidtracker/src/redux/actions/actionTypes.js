@@ -1,0 +1,2 @@
+export const GET_COVID_DATA = "GET_COVID_DATA";
+export const GET_COVID_DATA_ERROR = "GET_COVID_DATA_ERROR";
