@@ -12,7 +12,9 @@ export default function CovidApp() {
     dispatch(CovidData());
   }, [dispatch]);
 
-  const covidData = useSelector((state) => state.CovidData);
+  const covidData = useSelector((state) => state.covidData.covidData);
+
+  console.log(covidData);
 
   return (
     <>
@@ -22,7 +24,7 @@ export default function CovidApp() {
           recovery_cases={covidData.recovery_cases}
           death_cases={covidData.death_cases}
           currently_infected={covidData.currently_infected}
-          death_rate={covidData.death_rate}
+          death_rate={covidData.general_death_rate}
         />
       ) : (
         <div> No data </div>

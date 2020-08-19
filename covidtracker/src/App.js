@@ -9,6 +9,7 @@ export default function App(props) {
   return (
     <Provider store={store}>
       <div className="App">
+        <div> Hello World </div>
         <div>{props.children}</div>
       </div>
     </Provider>
