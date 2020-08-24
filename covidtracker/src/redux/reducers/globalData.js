@@ -1,11 +1,11 @@
-import { GET_COVID_DATA } from "../actions/actionTypes";
+import { GET_GLOBAL_DATA } from "../actions/actionTypes";
 
 const initialState = {};
 
 export default function (state = initialState, { type, payload }) {
   switch (type) {
-    case GET_COVID_DATA:
-      return { ...state, covidData: payload };
+    case GET_GLOBAL_DATA:
+      return { ...state, globalData: payload };
     default:
       return state;
   }

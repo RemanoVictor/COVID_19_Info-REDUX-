@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import covidData from "./covidData";
+import globalData from "./globalData";
 
 const rootReducer = combineReducers({
-  covidData: covidData,
+  globalData: globalData,
 });
 
 export default rootReducer;

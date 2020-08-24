@@ -1,2 +1,1 @@
-export const COVID_API =
-  "https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats";
+export const COVID_API = "https://api.covid19api.com/summary";
