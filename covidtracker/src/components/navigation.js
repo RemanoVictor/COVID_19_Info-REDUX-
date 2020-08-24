@@ -1,16 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav className="navigation">
       <li>
-        <a href="#">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="#">Total Cases & Recoveries</a>
-      </li>
-      <li>
-        <a href="#">Total Deaths & Average Death Rate</a>
+        <Link to="/Countries"> Countries</Link>
       </li>
     </nav>
   );

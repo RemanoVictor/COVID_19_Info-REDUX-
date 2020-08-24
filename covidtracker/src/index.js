@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
-import covidApp from "./pages/home";
+import CountriesPage from "./pages/Countries";
+import covidApp from "./pages/Home";
 
 ReactDOM.render(
   <Router>
     <App>
       <Switch>
         <Route path="/" exact component={covidApp} />
+        <Route path="/Countries" component={CountriesPage} />
       </Switch>
     </App>
   </Router>,

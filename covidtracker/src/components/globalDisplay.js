@@ -2,30 +2,28 @@ import React from "react";
 
 const GlobalDisplay = (props) => {
   const {
-    Total_Confirmed,
-    recovery_cases,
-    Total_Deaths,
-    currently_infected,
-    death_rate,
+    TotalConfirmed,
+    TotalRecovered,
+    TotalDeaths,
+    NewConfirmed,
+    NewRecovered,
+    NewDeaths,
   } = props;
   return (
     <div>
       <h3> COVID UPDATE </h3>
       <p>
-        Total Confirmed Cases:<b> {Total_Confirmed}</b>
+        Total Confirmed Cases:<b> {TotalConfirmed}</b>
       </p>
       <p>
-        Total Recoveries: <b>{recovery_cases}</b>
+        Total Recoveries: <b>{TotalRecovered}</b>
       </p>
       <p>
-        Total Deaths: <b>{Total_Deaths}</b>
+        Total Deaths: <b>{TotalDeaths}</b>
       </p>
-      <p>
-        Current infections: <b>{currently_infected}</b>
-      </p>
-      <p>
-        Average Death Rate: <b>{death_rate}</b>
-      </p>
+      <p>New Cases: {NewConfirmed}</p>
+      <p>New Recovered: {NewRecovered}</p>
+      <p> New Deaths: {NewDeaths}</p>
     </div>
   );
 };

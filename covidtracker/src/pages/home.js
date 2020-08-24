@@ -19,11 +19,12 @@ export default function CovidApp() {
     <>
       {globalCovidData !== undefined ? (
         <GlobalDisplay
-          Total_Confirmed={globalCovidData.TotalConfirmed}
-          recovery_cases={globalCovidData.recovery_cases}
-          Total_Deaths={globalCovidData.TotalDeaths}
-          currently_infected={globalCovidData.currently_infected}
-          death_rate={globalCovidData.general_death_rate}
+          TotalConfirmed={globalCovidData.TotalConfirmed}
+          TotalRecovered={globalCovidData.TotalRecovered}
+          TotalDeaths={globalCovidData.TotalDeaths}
+          NewConfirmed={globalCovidData.NewConfirmed}
+          NewRecovered={globalCovidData.NewRecovered}
+          NewDeaths={globalCovidData.NewDeaths}
         />
       ) : (
         <div> LOADING... </div>
