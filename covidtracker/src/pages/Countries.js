@@ -15,7 +15,6 @@ export default function CountriesPage() {
   }, [dispatch]);
 
   const countryData = useSelector((state) => state.countryData.countryData);
-  // console.log(countryData);
 
   function handleFiltering(input) {
     let searchedCountries = countryData.filter((value) => {

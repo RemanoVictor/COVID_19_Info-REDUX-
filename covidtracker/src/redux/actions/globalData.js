@@ -6,7 +6,7 @@ import { GLOBAL_API } from "../../constant";
 export const CovidData = () => async (dispatch) => {
   try {
     const covidResults = await axios.get(GLOBAL_API);
-    // console.log(covidResults.data.Global);
+
     dispatch({
       type: GET_GLOBAL_DATA,
       payload: covidResults.data.Global,
