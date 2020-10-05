@@ -7,7 +7,7 @@ import { CountryData } from "../redux/actions/countryData";
 export default function CountriesPage() {
   const dispatch = useDispatch();
   const [filteredCountries, setFilteredCountries] = useState(undefined);
-  const [searchPhrase, setsearchPhrase] = useState("");
+  const [searchPhrase, setsearchPhrase] = useState("Search Country");
   const [areCountriesFiltered, setareCountriesFiltered] = useState(false);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function CountriesPage() {
   }, [dispatch]);
 
   const countryData = useSelector((state) => state.countryData.countryData);
-  console.log(countryData);
+  // console.log(countryData);
 
   function handleFiltering(input) {
     let searchedCountries = countryData.filter((value) => {
@@ -34,14 +34,15 @@ export default function CountriesPage() {
         <input
           type="text"
           name="search"
-          autoComplete="False"
+          placeholder={searchPhrase}
           onChange={handleFiltering}
+          autoComplete="Off"
         />
       </form>
 
-      <div>
+      <div className="container">
         {areCountriesFiltered ? (
-          <div>
+          <div className="row">
             {filteredCountries.length > 0 ? (
               filteredCountries.map((value, index) => {
                 return (
@@ -59,7 +60,7 @@ export default function CountriesPage() {
             )}
           </div>
         ) : (
-          <div>
+          <div className="row">
             {countryData !== undefined ? (
               countryData.map((value, index) => {
                 return (

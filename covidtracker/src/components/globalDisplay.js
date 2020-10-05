@@ -21,9 +21,15 @@ const GlobalDisplay = (props) => {
       <p>
         Total Deaths: <b>{TotalDeaths}</b>
       </p>
-      <p>New Cases: {NewConfirmed}</p>
-      <p>New Recovered: {NewRecovered}</p>
-      <p> New Deaths: {NewDeaths}</p>
+      <p>
+        New Cases: <b>{NewConfirmed}</b>
+      </p>
+      <p>
+        <b>New Recovered: {NewRecovered}</b>
+      </p>
+      <p>
+        <b> New Deaths: {NewDeaths}</b>
+      </p>
     </div>
   );
 };

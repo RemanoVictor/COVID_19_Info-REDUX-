@@ -5,7 +5,7 @@ import { CovidData } from "../redux/actions/globalData";
 
 import GlobalDisplay from "../../src/components/globalDisplay";
 
-export default function CovidApp() {
+export default function CovidApp(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
